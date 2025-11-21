@@ -1,0 +1,30 @@
+# Dependencies
+node_modules
+package-lock.json
+
+# Build output
+dist
+*.local
+
+# Environment - NUNCA commitear archivos .env con datos sensibles
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Editor (mantener .vscode/settings.json para configuración del proyecto)
+.vscode/launch.json
+.vscode/tasks.json
+.idea
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
