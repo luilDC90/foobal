@@ -26,7 +26,7 @@ const selectOption = (index: number): void => {
 }
 
 const submitAnswer = (): void => {
-  if (selectedOption.value === null) return
+  if (selectedOption.value === null || !currentQuestion.value) return
 
   answered.value = true
   isCorrect.value = selectedOption.value === currentQuestion.value.correct

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import { argentineTeams, getRandomTeams } from '../data/teams'
+import { getRandomTeams } from '../data/teams'
 import type { TeamBadge } from '../types/games'
 
 interface Emits {

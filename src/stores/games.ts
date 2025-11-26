@@ -21,7 +21,7 @@ export const useGamesStore = defineStore('games', () => {
   // Computed
   const completedGamesToday = computed(() => {
     const today = new Date().toDateString()
-    return Object.entries(gamesProgress.value).filter(([gameId, progress]) => {
+    return Object.entries(gamesProgress.value).filter(([, progress]) => {
       return progress.completed && progress.date === today
     }).length
   })

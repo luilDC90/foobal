@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
 import { availableGames } from '../data/games'
 import { useGamesStore } from '../stores/games'
 import type { GameType } from '../types/games'
