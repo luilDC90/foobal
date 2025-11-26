@@ -6,6 +6,7 @@ export type GameType =
   | 'ranking-ciegas'  // Armar el Top
   | 'ascenso-profugo' // Jugador del ascenso o prófugo
   | 'quiz'            // Quiz clásico
+  | 'frases-iconicas' // Adivinar frases icónicas del fútbol argentino
 
 export interface GameInfo {
   id: GameType

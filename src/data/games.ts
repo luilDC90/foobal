@@ -49,6 +49,13 @@ export const availableGames: GameInfo[] = [
     description: 'Preguntas de cultura futbolera argentina',
     icon: '❓',
     difficulty: 'fácil'
+  },
+  {
+    id: 'frases-iconicas',
+    name: 'Frases Icónicas',
+    description: 'Adivina quién dijo estas frases míticas del fútbol argentino',
+    icon: '💬',
+    difficulty: 'medio'
   }
 ]
 

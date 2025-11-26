@@ -5,6 +5,7 @@ import GamesMenu from './components/GamesMenu.vue'
 import QuizChallenge from './components/QuizChallenge.vue'
 import Enigmatico from './games/Enigmatico.vue'
 import AscensoProfugo from './games/AscensoProfugo.vue'
+import FrasesIconicas from './games/FrasesIconicas.vue'
 import { useStreakStore } from './stores/streak'
 import { useGamesStore } from './stores/games'
 import { availableGames } from './data/games'
@@ -74,9 +75,15 @@ const closeGame = (): void => {
       @cancel="closeGame"
     />
 
+    <FrasesIconicas
+      v-if="currentGame === 'frases-iconicas'"
+      @complete="onGameComplete"
+      @cancel="closeGame"
+    />
+
     <!-- Próximamente: otros juegos -->
     <div
-      v-if="currentGame && !['quiz', 'enigmatico', 'ascenso-profugo'].includes(currentGame)"
+      v-if="currentGame && !['quiz', 'enigmatico', 'ascenso-profugo', 'frases-iconicas'].includes(currentGame)"
       class="coming-soon-overlay"
       @click="closeGame"
     >
