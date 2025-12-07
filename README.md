@@ -144,3 +144,39 @@ Este proyecto implementa buenas prácticas de seguridad:
 - ✅ Documentación en `SECURITY.md`
 
 **Lee [SECURITY.md](./SECURITY.md) antes de usar el proyecto.**
+
+## 🚀 CI/CD y Validaciones
+
+El proyecto incluye validación automática de TypeScript en el workflow de GitHub Actions:
+
+### Validación en Producción
+- ✅ **Type-check automático**: Cada push a `main` ejecuta `npm run type-check`
+- ✅ **Bloqueo de deploy**: Si hay errores de TypeScript, el despliegue se cancela
+- ✅ **GitHub Pages**: Solo se despliega código sin errores de tipo
+
+### Comandos Disponibles para Desarrollo
+
+```bash
+# Verificar errores de TypeScript (sin hacer build)
+npm run type-check
+
+# Desarrollo con hot-reload
+npm run dev
+
+# Build de producción (sin verificación de tipos)
+npm run build
+
+# Preview del build de producción
+npm run preview
+```
+
+### Workflow de Despliegue
+
+```
+1. npm install          # Instalar dependencias
+2. npm run type-check   # ✅ Validar TypeScript (falla si hay errores)
+3. npm run build        # Compilar a producción
+4. Deploy a GitHub Pages # Solo si todo pasó
+```
+
+**Nota:** El build de producción (`npm run build`) no incluye verificación de tipos para mayor velocidad, pero el workflow de GitHub Actions sí la ejecuta antes del deploy.
